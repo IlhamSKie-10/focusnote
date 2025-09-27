@@ -1,0 +1,255 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* FocusNote Design System - Glassmorphism & Modern Productivity */
+
+@layer base {
+  :root {
+    /* Background & Surface Colors */
+    --background: 240 20% 98%;
+    --background-secondary: 240 15% 96%;
+    --surface: 0 0% 100%;
+    --surface-glass: 0 0% 100% / 0.8;
+    --surface-hover: 240 15% 98%;
+    
+    /* Text Colors */
+    --foreground: 240 15% 15%;
+    --foreground-secondary: 240 10% 45%;
+    --foreground-muted: 240 8% 65%;
+
+    /* Glass Effect Colors */
+    --glass-primary: 245 60% 60% / 0.1;
+    --glass-secondary: 220 45% 85% / 0.2;
+    --glass-border: 240 20% 90% / 0.4;
+
+    /* Brand Colors */
+    --primary: 245 75% 60%;
+    --primary-hover: 245 75% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glass: 245 75% 60% / 0.1;
+
+    /* Accent Colors */
+    --accent: 280 65% 65%;
+    --accent-hover: 280 65% 60%;
+    --accent-foreground: 0 0% 100%;
+    --accent-glass: 280 65% 65% / 0.1;
+
+    /* Status Colors */
+    --success: 142 76% 45%;
+    --success-glass: 142 76% 45% / 0.1;
+    --warning: 45 93% 47%;
+    --warning-glass: 45 93% 47% / 0.1;
+    --error: 0 84% 60%;
+    --error-glass: 0 84% 60% / 0.1;
+
+    /* Neutral Variants */
+    --muted: 240 15% 96%;
+    --muted-foreground: 240 8% 55%;
+    --border: 240 15% 90%;
+    --input: 240 15% 92%;
+    --ring: 245 75% 60%;
+
+    /* Card Variants */
+    --card: 0 0% 100%;
+    --card-foreground: 240 15% 15%;
+    --card-glass: 0 0% 100% / 0.7;
+    --card-border: 240 15% 92%;
+
+    /* Interactive States */
+    --hover: 240 15% 96%;
+    --active: 245 75% 95%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(245 75% 60%), hsl(280 65% 65%));
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.2), hsl(240 15% 96% / 0.1));
+    --gradient-surface: linear-gradient(135deg, hsl(0 0% 100%), hsl(240 15% 98%));
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px hsl(240 15% 15% / 0.04);
+    --shadow-md: 0 4px 16px hsl(240 15% 15% / 0.08);
+    --shadow-lg: 0 8px 32px hsl(240 15% 15% / 0.12);
+    --shadow-glass: 0 8px 32px hsl(245 75% 60% / 0.15);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Theme - Glassmorphism Style */
+    --background: 240 25% 8%;
+    --background-secondary: 240 20% 10%;
+    --surface: 240 15% 12%;
+    --surface-glass: 240 15% 15% / 0.8;
+    --surface-hover: 240 15% 14%;
+    
+    /* Dark Text Colors */
+    --foreground: 240 20% 95%;
+    --foreground-secondary: 240 15% 75%;
+    --foreground-muted: 240 10% 55%;
+
+    /* Dark Glass Effects */
+    --glass-primary: 245 60% 60% / 0.2;
+    --glass-secondary: 220 45% 85% / 0.1;
+    --glass-border: 240 20% 25% / 0.4;
+
+    /* Brand Colors - Slightly Brighter in Dark */
+    --primary: 245 80% 65%;
+    --primary-hover: 245 80% 70%;
+    --primary-foreground: 240 25% 8%;
+    --primary-glass: 245 80% 65% / 0.15;
+
+    /* Accent Colors */
+    --accent: 280 70% 70%;
+    --accent-hover: 280 70% 75%;
+    --accent-foreground: 240 25% 8%;
+    --accent-glass: 280 70% 70% / 0.15;
+
+    /* Status Colors */
+    --success: 142 76% 50%;
+    --success-glass: 142 76% 50% / 0.15;
+    --warning: 45 93% 52%;
+    --warning-glass: 45 93% 52% / 0.15;
+    --error: 0 84% 65%;
+    --error-glass: 0 84% 65% / 0.15;
+
+    /* Dark Neutral Variants */
+    --muted: 240 15% 14%;
+    --muted-foreground: 240 10% 65%;
+    --border: 240 15% 20%;
+    --input: 240 15% 16%;
+    --ring: 245 80% 65%;
+
+    /* Dark Card Variants */
+    --card: 240 15% 12%;
+    --card-foreground: 240 20% 95%;
+    --card-glass: 240 15% 15% / 0.6;
+    --card-border: 240 15% 20%;
+
+    /* Dark Interactive States */
+    --hover: 240 15% 16%;
+    --active: 245 80% 20%;
+
+    /* Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(245 80% 65%), hsl(280 70% 70%));
+    --gradient-glass: linear-gradient(135deg, hsl(240 15% 15% / 0.3), hsl(240 10% 20% / 0.1));
+    --gradient-surface: linear-gradient(135deg, hsl(240 15% 12%), hsl(240 20% 10%));
+
+    /* Dark Shadows */
+    --shadow-sm: 0 2px 8px hsl(240 25% 5% / 0.4);
+    --shadow-md: 0 4px 16px hsl(240 25% 5% / 0.5);
+    --shadow-lg: 0 8px 32px hsl(240 25% 5% / 0.6);
+    --shadow-glass: 0 8px 32px hsl(245 80% 65% / 0.25);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer components {
+  /* Glass Effect Components */
+  .glass-card {
+    @apply backdrop-blur-md bg-card-glass border border-glass-border shadow-md rounded-lg;
+  }
+
+  .glass-nav {
+    @apply backdrop-blur-xl bg-surface-glass border-b border-glass-border;
+  }
+
+  .glass-button {
+    @apply backdrop-blur-sm bg-glass-primary border border-glass-border hover:bg-glass-secondary transition-all duration-200;
+  }
+
+  /* Animation Classes */
+  .animate-glass-float {
+    animation: glass-float 6s ease-in-out infinite;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.4s ease-out;
+  }
+}
+
+@layer utilities {
+  /* Glassmorphism Utilities */
+  .backdrop-blur-glass {
+    backdrop-filter: blur(12px) saturate(1.2);
+  }
+
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-glass {
+    border-color: hsl(var(--glass-border));
+  }
+
+  .shadow-glass {
+    box-shadow: var(--shadow-glass);
+  }
+}
+
+/* Custom Animations */
+@keyframes glass-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(1deg); }
+  66% { transform: translateY(5px) rotate(-1deg); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary-hover));
+}
